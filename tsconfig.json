@@ -17,5 +17,5 @@
 		"declaration": true
 	},
 	"exclude": ["**/node_modules", "**/webpack"],
-	"include": ["scripts", "test"]
+	"include": ["node", "test"]
 }
