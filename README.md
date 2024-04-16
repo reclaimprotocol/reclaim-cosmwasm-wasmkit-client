@@ -21,6 +21,6 @@ wasmkit compile
 ## Running script
 
 ```bash
-wasmkit run node/verify.ts
+wasmkit run scripts/verify.ts
 ```
 
