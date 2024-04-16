@@ -95,6 +95,8 @@ const networks = {
 module.exports = {
   networks: {
     default: networks.neutron_testnet,
+    // uncommnet for mainnet
+    // default: networks.neutron_mainnet,
     testnet: networks.neutron_testnet,
     localnet: networks.neutron_localnet,
     mainnet: networks.neutron_mainnet,
