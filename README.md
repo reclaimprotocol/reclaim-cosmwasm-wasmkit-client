@@ -1,6 +1,4 @@
-# CosmWasm Contract Sample Project
-
-This template contains simple counter contract.
+# Neutron Client Contract
 
 ## Compiling contracts
 

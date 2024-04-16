@@ -34,12 +34,9 @@ pub fn query(deps: Deps, _env: Env, msg: QueryMsg) -> StdResult<Binary> {
     }
 }
 
-
 pub fn empty_function(_deps: Deps) -> StdResult<Binary> {
     to_json_binary(&(QueryResponse {count : 0}))
 }
-
-
 
 #[entry_point]
 pub fn execute(
