@@ -1,8 +1,8 @@
 const neutron_testnet_accounts = [
   {
     name: 'account_0',
-    address: 'neutron1hmae7yj4s06ghe33u5gk2fqgguwfvpxr4pu5ns',
-    mnemonic: 'boy garbage stand work fox crack private voice actress resemble sample prepare arrest photo dial mouse message pistol situate across usual ghost portion violin'
+    address: '', // your neutron address
+    mnemonic: ''// your mnemonic key
   },
 ];
 
