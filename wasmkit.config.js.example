@@ -6,6 +6,14 @@ const neutron_testnet_accounts = [
   },
 ];
 
+const neutron_mainnet_accounts = [
+{
+    name: 'account_0',
+    address: '', // your neutron address
+    mnemonic: ''// your mnemonic key
+  },
+];
+
 const neutron_localnet_accounts = [
   {
     name: 'account_0',
@@ -22,9 +30,6 @@ const neutron_localnet_accounts = [
     address: 'neutron14xcrdjwwxtf9zr7dvaa97wy056se6r5erln9pf',
     mnemonic: 'obscure canal because tomorrow tribe sibling describe satoshi kiwi upgrade bless empty math trend erosion oblige donate label birth chronic hazard ensure wreck shine'
   }
-];
-
-const neutron_mainnet_accounts = [
 ];
 
 const networks = {
