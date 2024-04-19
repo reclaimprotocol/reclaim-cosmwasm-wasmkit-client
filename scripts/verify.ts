@@ -19,6 +19,8 @@ export default async function run () {
   // Instantiate Contract
 
   const contract = "neutron1cqh6yx9jt2c6khkedc6cu2v6h8vv7apmtye56lg76flhture79jsxmrke5";
+  //Uncomment for mainnet
+  // const contract = "neutron1c4rl2zws642m2nfkm7jl9ej0mc8emkhss5397ph7dh3sqggrldlsapylwe";
 
   const contract_info = await reclaim_contract.instantiate(
     {
