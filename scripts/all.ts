@@ -2,29 +2,30 @@ import { getAccountByName } from "@kubiklabs/wasmkit";
 
 import { ReclaimClientContract } from "../artifacts/typescript_schema/ReclaimClientContract";
 
-export default async function run () {
+import fs from 'fs'
+
+export default async function run (network: any) {
   const runTs = String(new Date());
   const contract_owner = await getAccountByName("account_0");
   const reclaim_contract = new ReclaimClientContract();
   await reclaim_contract.setupClient();
+
+  const content = JSON.parse(
+      fs.readFileSync('scripts/config.json', 'utf-8')
+  )
+  const coreContractAddress = content[network.network.name]
 
   // Deploy Contract
 
   const deploy_response = await reclaim_contract.deploy(
     contract_owner
   );
-  console.log(deploy_response);
-  console.log(contract_owner);
-
+  
   // Instantiate Contract
-
-  const contract = "neutron1cqh6yx9jt2c6khkedc6cu2v6h8vv7apmtye56lg76flhture79jsxmrke5";
-  //Uncomment for mainnet
-  // const contract = "neutron1c4rl2zws642m2nfkm7jl9ej0mc8emkhss5397ph7dh3sqggrldlsapylwe";
 
   const contract_info = await reclaim_contract.instantiate(
     {
-      contract
+      contract: coreContractAddress
     },
     `deploy test ${runTs}`,
     contract_owner,
@@ -69,5 +70,4 @@ export default async function run () {
       contract_owner
   );
   console.log(ex_response);
-  
 }

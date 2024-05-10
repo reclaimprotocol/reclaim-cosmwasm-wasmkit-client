@@ -8,9 +8,10 @@
     "build:watch": "tsc -w -p ."
   },
   "dependencies": {
+    "@kubiklabs/wasmkit": "^0.2.8",
     "@types/chai": "^4.3.0",
     "chai": "^4.3.4",
-    "@kubiklabs/wasmkit": "^0.2.8",
+    "fs": "^0.0.1-security",
     "typescript": "^4.3.2"
   }
 }
